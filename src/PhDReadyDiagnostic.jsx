@@ -765,11 +765,11 @@ Return only the 3 paragraphs, no preamble.`;
               border: `2px solid ${BRAND.teal}`
             }}>
               <h3 style={{ fontSize: 18, fontWeight: 700, color: BRAND.teal, margin: 0, marginBottom: 8 }}>
-                Get your personalized interpretation
+                See your personalized interpretation
               </h3>
               <p style={{ fontSize: 14, lineHeight: 1.6, color: BRAND.text, marginTop: 0 }}>
-                Enter your email to receive your full results, a personalized reading of your specific pattern,
-                and next steps based on what your reflections revealed.
+                Enter your email to unlock your personalized reading of your specific pattern and next steps
+                based on what your reflections revealed. Your interpretation will appear below.
               </p>
               <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap' }}>
                 <input
@@ -790,7 +790,7 @@ Return only the 3 paragraphs, no preamble.`;
                 />
                 <button onClick={handleEmailSubmit} style={btnPrimary}>
                   <Mail size={16} style={{ verticalAlign: 'middle', marginRight: 6 }} />
-                  Send My Results
+                  Reveal My Interpretation
                 </button>
               </div>
               <div style={{ fontSize: 12, color: BRAND.textMuted, marginTop: 10, fontStyle: 'italic' }}>
@@ -798,11 +798,11 @@ Return only the 3 paragraphs, no preamble.`;
               </div>
             </div>
           ) : (
-            <div style={{ backgroundColor: BRAND.white, padding: '28px', borderRadius: 4, marginBottom: 20 }}>
+            <div id="results-summary" style={{ backgroundColor: BRAND.white, padding: '28px', borderRadius: 4, marginBottom: 20 }}>
               <div style={{ display: 'flex', alignItems: 'center', gap: 8, marginBottom: 16 }}>
                 <Check size={20} style={{ color: '#4a7c59' }} />
                 <div style={{ fontSize: 14, color: '#4a7c59', fontWeight: 700, fontFamily: 'Helvetica, sans-serif' }}>
-                  RESULTS SENT TO {email.toUpperCase()}
+                  INTERPRETATION UNLOCKED
                 </div>
               </div>
 
@@ -822,6 +822,34 @@ Return only the 3 paragraphs, no preamble.`;
                   whiteSpace: 'pre-wrap'
                 }}>
                   {aiInterpretation}
+                </div>
+              )}
+
+              {!loadingInterpretation && aiInterpretation && (
+                <div style={{
+                  marginTop: 24,
+                  paddingTop: 20,
+                  borderTop: `1px solid ${BRAND.rule}`,
+                }}>
+                  <div style={{
+                    fontSize: 13,
+                    color: BRAND.textMuted,
+                    marginBottom: 12,
+                    lineHeight: 1.5
+                  }}>
+                    Want to reference these results later? Save this page as a PDF to your device.
+                  </div>
+                  <button
+                    onClick={() => window.print()}
+                    style={{
+                      ...btnSecondary,
+                      fontSize: 13,
+                      padding: '10px 18px'
+                    }}
+                  >
+                    <Download size={14} style={{ verticalAlign: 'middle', marginRight: 6 }} />
+                    Save Results as PDF
+                  </button>
                 </div>
               )}
             </div>
