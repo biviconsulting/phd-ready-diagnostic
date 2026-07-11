@@ -6,6 +6,52 @@
     <title>The PhD-Ready Diagnostic | BIVI Consulting</title>
     <meta name="description" content="An interactive diagnostic that shows PhD applicants exactly where their application is losing ground. Built by a former UC Berkeley graduate admissions officer." />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <style>
+      @media print {
+        @page {
+          margin: 0.6in;
+          size: letter;
+        }
+        body {
+          background: white !important;
+        }
+        button {
+          display: none !important;
+        }
+        input[type="email"] {
+          display: none !important;
+        }
+        /* Add title banner when printing */
+        body::before {
+          content: "The PhD-Ready Diagnostic — Your Results";
+          display: block;
+          font-family: Georgia, serif;
+          font-size: 20pt;
+          font-weight: 700;
+          color: #2d5560;
+          margin-bottom: 16pt;
+          padding-bottom: 8pt;
+          border-bottom: 2px solid #2d5560;
+        }
+        /* Add footer with brand info */
+        body::after {
+          content: "BIVI Consulting • biviconsulting.com • Developed by Bianca Victorica";
+          display: block;
+          font-family: Helvetica, sans-serif;
+          font-size: 9pt;
+          color: #5a6b73;
+          text-align: center;
+          margin-top: 24pt;
+          padding-top: 12pt;
+          border-top: 1px solid #c8d2d6;
+        }
+        /* Prevent color loss on background elements */
+        * {
+          -webkit-print-color-adjust: exact !important;
+          print-color-adjust: exact !important;
+        }
+      }
+    </style>
   </head>
   <body style="margin:0; padding:0;">
     <div id="root"></div>
