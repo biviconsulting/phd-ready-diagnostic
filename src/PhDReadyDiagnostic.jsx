@@ -862,7 +862,17 @@ Return only the 3 paragraphs, no preamble.`;
             padding: '28px',
             borderRadius: 4,
             marginBottom: 20
-          }}>href="https://biviconsulting.com/contact"
+          }}>
+            <h3 style={{ fontSize: 18, fontWeight: 700, margin: 0, marginBottom: 10 }}>
+              If you found gaps you're not sure how to close
+            </h3>
+            <p style={{ fontSize: 14, lineHeight: 1.6, marginTop: 0, opacity: 0.9 }}>
+              I work with PhD applicants one-on-one to close exactly the gaps this diagnostic surfaces.
+              Statement of purpose, school list, faculty research, recommender strategy. Everything that
+              needs to signal doctoral readiness clearly.
+            </p>
+            <a
+              href="https://biviconsulting.com/contact"
               target="_blank"
               rel="noopener noreferrer"
               style={{
