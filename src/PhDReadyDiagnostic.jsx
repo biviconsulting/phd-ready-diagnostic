@@ -862,29 +862,34 @@ Return only the 3 paragraphs, no preamble.`;
             padding: '28px',
             borderRadius: 4,
             marginBottom: 20
-          }}>
-            <h3 style={{ fontSize: 18, fontWeight: 700, margin: 0, marginBottom: 10 }}>
-              If you found gaps you're not sure how to close
-            </h3>
-            <p style={{ fontSize: 14, lineHeight: 1.6, marginTop: 0, opacity: 0.9 }}>
-              I work with PhD applicants one-on-one to close exactly the gaps this diagnostic surfaces.
-              Statement of purpose, school list, faculty research, recommender strategy. Everything that
-              needs to signal doctoral readiness clearly.
-            </p>
-            <div style={{
-              backgroundColor: 'rgba(255,255,255,0.1)',
-              padding: '12px 16px',
-              borderRadius: 4,
-              marginTop: 16,
-              fontSize: 13,
-              fontFamily: 'Helvetica, sans-serif'
-            }}>
-              <div style={{ fontWeight: 700, marginBottom: 4 }}>biviconsulting.com/contact</div>
+          }}>href="https://biviconsulting.com/contact"
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{
+                display: 'block',
+                backgroundColor: 'rgba(255,255,255,0.1)',
+                padding: '14px 18px',
+                borderRadius: 4,
+                marginTop: 16,
+                fontSize: 13,
+                fontFamily: 'Helvetica, sans-serif',
+                color: BRAND.white,
+                textDecoration: 'none',
+                border: '1px solid rgba(255,255,255,0.25)',
+                transition: 'background-color 0.15s'
+              }}
+              onMouseOver={(e) => e.currentTarget.style.backgroundColor = 'rgba(255,255,255,0.2)'}
+              onMouseOut={(e) => e.currentTarget.style.backgroundColor = 'rgba(255,255,255,0.1)'}
+            >
+              <div style={{ fontWeight: 700, marginBottom: 4, display: 'flex', alignItems: 'center', gap: 8 }}>
+                Book a free 30-minute call
+                <ChevronRight size={14} style={{ verticalAlign: 'middle' }} />
+              </div>
               <div style={{ opacity: 0.75, fontStyle: 'italic' }}>
                 No obligation. If it's a fit, I'll tell you what working together looks like.
                 If it's not, I'll tell you that too.
               </div>
-            </div>
+            </a>
           </div>
 
           {/* Reset */}
