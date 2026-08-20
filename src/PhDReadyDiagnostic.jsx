@@ -290,7 +290,7 @@ Return only the 3 paragraphs, no preamble.`;
       const data = await response.json();
       setAiInterpretation((data.text || "").trim());
     } catch (err) {
-      setAiInterpretation("Your results have been generated. See the section-by-section breakdown below for your specific pattern. If you'd like a personalized interpretation, book a free 30-minute call at biviconsulting.com/contact.");
+      setAiInterpretation("Your results have been generated. See the section-by-section breakdown below for your specific pattern. If you'd like a personalized interpretation, book a free 30-minute call at biviconsulting.as.me.");
     }
     setLoadingInterpretation(false);
   };
@@ -872,7 +872,7 @@ Return only the 3 paragraphs, no preamble.`;
               needs to signal doctoral readiness clearly.
             </p>
             <a
-              href="https://biviconsulting.com/contact"
+              href="https://biviconsulting.as.me/"
               target="_blank"
               rel="noopener noreferrer"
               style={{
@@ -895,11 +895,19 @@ Return only the 3 paragraphs, no preamble.`;
                 Book a free 30-minute call
                 <ChevronRight size={14} style={{ verticalAlign: 'middle' }} />
               </div>
-              <div style={{ opacity: 0.75, fontStyle: 'italic' }}>
+                  <div style={{ opacity: 0.75, fontStyle: 'italic' }}>
                 No obligation. If it's a fit, I'll tell you what working together looks like.
                 If it's not, I'll tell you that too.
               </div>
             </a>
+            <div style={{ marginTop: 14, fontSize: 13, opacity: 0.85 }}>
+              Not ready to book? <a
+                href="https://biviconsulting.com/contact"
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{ color: BRAND.white, textDecoration: 'underline' }}
+              >Send me a note instead.</a>
+            </div>
           </div>
 
           {/* Reset */}
