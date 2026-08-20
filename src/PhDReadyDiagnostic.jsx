@@ -768,8 +768,8 @@ Return only the 3 paragraphs, no preamble.`;
                 See your personalized interpretation
               </h3>
               <p style={{ fontSize: 14, lineHeight: 1.6, color: BRAND.text, marginTop: 0 }}>
-                Enter your email to unlock your personalized reading of your specific pattern and next steps
-                based on what your reflections revealed. Your interpretation will appear below.
+                Enter your email to unlock your personalized reading of your specific pattern and next steps based on what your reflections revealed.
+                Your results stay on this page. To keep a copy, click "Save Your Results as PDF" below after you unlock them.
               </p>
               <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap' }}>
                 <input
